@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index1.css">
+    <title>REGISTRO Y LOGIN</title>
+</head>
+<body>
+
+<div class="formulario">
+    <h3>REGISTRARSE</h3>
+    <div class="contenedor">
+        <div class="input-contenedor">
+
+            <input type="email" placeholder="Correo electronico" id="email" name=""><br>
+        </div>
+        <div class="input-contenedor">
+
+            <input type="password" placeholder="Contraseña" id="password" name=""><br>
+        </div>
+        <br>
+    <button id="ingresar" class="button">ACEPTAR</button>
+    </div>
+</div>
+
+
+<div class="formulario">
+    <h3>INGRESAR</h3>
+    <div class="contenedor">
+        <div class="input-contenedor">
+            <input type="email" placeholder="Correo electronico" id="email2"><br>
+        </div>
+        <div class="input-contenedor">
+            <input type="password" placeholder="Contraseña" id="password2"><br>
+        </div>
+    <br>
+    <button id="ingresar2" class="button">ACEPTAR</button>
+    </div>
+</div>
+<script type="module">
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+    
+    
+    
+    const firebaseConfig = {
+    apiKey: "AIzaSyCGjEN3WputHaVoEqdUv5AAuqh6UXFm5L0",
+    authDomain: "priyaless-98624.firebaseapp.com",
+    projectId: "priyaless-98624",
+    storageBucket: "priyaless-98624.appspot.com",
+    messagingSenderId: "734611349199",
+    appId: "1:734611349199:web:ad6a2d02be16896d5621ba"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    document.getElementById("ingresar").addEventListener("click", function(){
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    alert("La cuenta se creo exitosamente")
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    alert("Hay fallas en el registro o la cuenta ya existe")
+    });
+
+})
+    document.getElementById("ingresar2").addEventListener("click", function(){
+        const email2 = document.getElementById("email2").value;
+        const password2 = document.getElementById("password2").value;
+
+        signInWithEmailAndPassword(auth, email2, password2)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    alert("Bienvenido a PRIYALESS")
+    window.open("index_acceso.html")
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert("Haz llenado incorrectamente o la cuenta no esta registrada")
+});
+    
+    })
+</script>
+</body>
+</html>

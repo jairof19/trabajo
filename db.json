@@ -1,0 +1,24 @@
+{
+  "articulos": [
+    {
+      "id": "OPj5D4",
+      "nombre": "Cokkis",
+      "marca": "Break",
+      "precio": 26.99,
+      "tamanio": 30,
+      "color": "Marron",
+      "peso": 15,
+      "disponibilidad": "si"
+    },
+    {
+      "id": "rq5O2A",
+      "nombre": "Logical",
+      "marca": "Perty",
+      "precio": 10.99,
+      "tamanio": 100,
+      "color": "Rosa",
+      "peso": 20,
+      "disponibilidad": "no"
+    }
+  ]
+}

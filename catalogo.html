@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/ctalogo.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/enla.css">
+    <title>Catologo de prendas</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+        <div class="main-header__container">
+            <h1 class="main-header__title" id="tit">ILAHUI</h1>
+            <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+            <nav class="main-nav" id="main-nav">
+            <ul class="menu">
+                <li class="menu__item"><a href="./index_acceso.html" class="menu__link">INICIO</a></li>
+                <li class="menu__item"><a id="principal" href="#" class="menu__link">CATALOGO DE PRENDAS</a></li>
+            </ul>
+            <ul class="menu">
+                <li class="menu__item"><a href="./papeleria.html" class="menu__link">PAPELERIA</a></li>
+                <li class="menu__item"><a href="./golosinas.html" class="menu__link">GOLOSINAS</a></li>
+                <li class="menu__item"><a href="./tecnologia.html" class="menu__link">TECNOLOGIA</a></li>
+                <li class="menu__item"><a href="./B_S.html" class="menu__link">BELLEZA Y SALUD</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="main-header__container">
+            <span class="main-header__txt">Mas informacion</span>
+            <p class="main-header__txt"><i class="fas fa-phone"></i> Numero 12345678099</p>
+        </div>
+        <div class="main-header__container">
+            <a href="" class="main-header__link"><i class="fas fa-user"></i></a>
+            <a href="./index.html" class="main-header__btn">Cerrar sesion<i class="fas fa-shopping-cart"></i></a>
+            
+        </div>
+        </div>
+    </header>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./image/Pri 01.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Gorro de invierno infantil</p>
+                    <span class="precio">S/. 29.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./image/Pri 02.jpg" alt="">
+                    </div>
+                    <p class="descripcion" id>Termo deportivo</p>
+                    <span class="precio">S/. 49.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./image/Pri 03.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Tomatodo con asa
+                    </p>
+                    <span class="precio">S/. 42.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    
+                
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto1">
+                        <img src="./image/Pri 04.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Goroo de invierno</p>
+                    <span class="precio">S/. 35.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="./image/Pri 05.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Vaso Tomatodo</p>
+                    <span class="precio">S/. 19.00</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto1">
+                        <img src="./image/Pri 06.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Taza con tapa</p>
+                    <span class="precio">S/. 29.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+            <div class="contenedor-foto">
+                        
+                    </div>
+                    
+                </div>
+            </div> 
+            <div class="fila">
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto1">
+                        <img src="./image/Pri 07.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Tomatodo Speed</p>
+                    <span class="precio">S/. 49.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto1">
+                        <img src="./image/Pri 08.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Termo diseño</p>
+                    <span class="precio">S/. 32.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto1">
+                        <img src="./image/Pri 09.jpg" alt="">
+                    </div>
+                    <p class="descripcion">Bufanda infantil</p>
+                    <span class="precio">S/. 32.90</span>
+                </div>
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="./image/1.png" alt="" id="img">
+                <h2 id="modelo">NIKE MODEL 1</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">$ 130</span>
+
+                <div class="fila">
+
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer__section">
+        <h2 class="footer__title">Inicio</h2>
+        <p class="footer__txt">Es una tienda de ropa textil que se encuentra en Gamarra
+            hacemos venta por mayor y por menor , tienen ropa de temporada y pagos  de contraentregas y tranferencias</p>
+        </div>
+        <div class="footer__section">
+        <h2 class="footer__title">Ubicacion:</h2>
+        <p class="footer__txt">Solo ventas online</p>
+        <h2 class="footer__title">Contacto</h2>
+        <p class="footer__txt">Whatsapp: +9283823978237</p>
+        <p class="footer__txt">Instagram: @priyaless2513</p>
+        </div>
+        <div class="footer__section">
+        <h2 class="footer__title">Contenido</h2>
+        <a href="" class="footer__link">Inicio</a>
+        <a href="" class="footer__link">Catalogo de prendas</a>
+        <a href="" class="footer__link">Login</a>
+        <a href="" class="footer__link">Contactos</a>
+        </div>
+        <div class="footer__section">
+        <h2 class="footer__title">Pagina creado por:</h2>
+        <p class="footer__txt">@........
+            <p class="footer__txt">@...........</p>
+            <p class="footer__txt">@.........</p>
+            <p class="footer__txt">@........</p>
+        </p>
+        
+        </div>
+        <p class="copy">© 2021 Goggles. All Rights Reserved | Tienda Priyaless</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
